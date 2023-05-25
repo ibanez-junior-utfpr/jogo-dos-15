@@ -1,6 +1,6 @@
 # jogo-dos-15
 Jogo dos 15 - projeto da disciplina SI27S
-![Jogos dos 15](https://pt.wikipedia.org/wiki/O_jogo_do_15#/media/Ficheiro:15-puzzle.svg)
+![Jogos dos 15](https://cdn.awsli.com.br/600x700/1371/1371841/produto/57103272/5a85b42d4f.jpg)
 # Equipe:
 Nome | RA | Email
 -----|----|-------

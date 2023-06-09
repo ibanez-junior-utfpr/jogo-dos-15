@@ -7,6 +7,8 @@ Jogo dos 15 - projeto da disciplina SI27S
 # Equipe:
 Nome | RA | Email
 -----|----|-------
+Fernando Matheus dos Santos | 2034980 | fernandos.2000@alunos.utfpr.edu.br
+Marinilsa Sansigolo | 2095564 | marisr7@hotmail.com 
 Pedro Cardoso Barzan | 2203618 | pcardosow.nnf@gmail.com
 Valdenir Ziger (Deno) | 2095637 | valdenir@alunos.utfpr.edu.br
 Ibanez Fernandes da Silva Junior | 2033500 | ibanezjunior@alunos.utfpr.edu.br

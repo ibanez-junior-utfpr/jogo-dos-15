@@ -109,84 +109,72 @@ def expandir_vizinhanca(tabela):
 					movimento = -1
 				else:
 					x = x - 1
-					#print("linha: ", l, " subir 1 linha: ", x)
 			case 1:
 				#descer 1 linha
 				if (l + 1) > 3:
 					movimento = -1
 				else:
 					x = x + 1
-					#print("linha: ", l, " descer 1 linha: ", x)
 			case 2:
 				#esquerda 1 coluna
 				if (c - 1) < 0:
 					movimento = -1
 				else:
 					y = y - 1
-					#print("coluna: ", c, " esquerda 1 coluna: ", y)
 			case 3:
 				#direita 1 coluna
 				if (c + 1) > 3:
 					movimento = -1
 				else:
 					y = y + 1
-					#print("coluna: ", c, " direita 1 coluna: ", y)
 			case 4:
 				#subir 2 linhas
 				if (l - 2) < 0:
 					movimento = -1
 				else:
 					x = x - 2
-					#print("linha: ", l, " subir 2 linhas: ", x)
 			case 5:
 				#descer 2 linhas
 				if (l + 2) > 3:
 					movimento = -1
 				else:
 					x = x + 2
-					#print("linha: ", l, " descer 2 linhas: ", x)
 			case 6:
 				#esquerda 2 colunas
 				if (c - 2) < 0:
 					movimento = -1
 				else:
 					y = y - 2
-					#print("coluna: ", c, " esquerda 2 colunas: ", y)
 			case 7:
 				#direita 2 colunas
 				if (c + 2) > 3:
 					movimento = -1
 				else:
 					y = y + 2
-					#print("coluna: ", c, " direita 2 colunas: ", y)
 			case 8:
 				#subir 3 linhas
 				if (l - 3) < 0:
 					movimento = -1
 				else:
 					x = x - 3
-					#print("linha: ", l, " subir 3 linhas: ", x)
 			case 9:
 				#descer 3 linhas
 				if (l + 3) > 3:
 					movimento = -1
 				else:
 					x = x + 3
-					#print("linha: ", l, " descer 3 linhas: ", x)
 			case 10:
 				#esquerda 3 colunas
 				if (c - 3) < 0:
 					movimento = -1
 				else:
 					y = y - 3
-					#print("coluna: ", c, " esquerda 3 colunas: ", y)
 			case 11:
 				#direita 3 colunas
 				if (c + 3) > 3:
 					movimento = -1
 				else:
 					y = y + 3
-					#print("coluna: ", c, " direita 3 colunas: ", y)
 	if x != l:
 		if l > x:
 			inc = -1
@@ -211,7 +199,6 @@ def expandir_vizinhanca(tabela):
 				troca = tabela[l][(v + 1)]
 			tabela[l][v] = troca
 		tabela[l][y] = 0
-
 	#mostrar_array(antes, tabela)
 	#input("Tecle algo para continuar...")
 	return tabela

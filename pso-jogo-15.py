@@ -6,7 +6,7 @@ class Particle:
         self.fitness = self.calculate_fitness()
 
     def calculate_fitness(self):
-        distance = 0
+        distance = 00
         for i in range(4):
             for j in range(4):
                 tile = self.board[i*4 + j]

@@ -44,7 +44,9 @@ def update_velocity(particle, global_best, inertia_weight, cognitive_weight, soc
 def update_position(particle, velocity):
     new_board = [0] * 16
     for i in range(16):
-        new_pos = (particle.board[i] + velocity[i]) % 16
+        new_pos = int((particle.board[i] + velocity[i]) % 16)
+        #print(particle.board[i], velocity[i], new_pos)
+        #input("...")
         while new_board[new_pos] != 0:
             new_pos = (new_pos + 1) % 16
         new_board[new_pos] = particle.board[i]
@@ -74,8 +76,8 @@ def pso_algorithm(num_particles, num_iterations, inertia_weight, cognitive_weigh
     return global_best
 
 # Exemplo de uso
-num_particles = 20
-num_iterations = 100
+num_particles = 200
+num_iterations = 2000
 inertia_weight = 0.5
 cognitive_weight = 1.0
 social_weight = 1.0

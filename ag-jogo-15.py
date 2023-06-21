@@ -7,9 +7,14 @@ def print_board(board):
         print("\n")
 
 def get_blank_position(board):
-    print(board)
-    #input("Tecle algo...")
-    return board.index(0)
+    retorno = -1
+    if 0 in board:
+        retorno = board.index(0)
+    return retorno
+
+def insert_blank_position(board):
+    board[random.randrange(16)] = 0
+    return board
 
 def get_neighbors(board):
     neighbors = []
@@ -47,8 +52,6 @@ def create_population(population_size):
         random.shuffle(individual)
         individual.append(0)
         population.append(individual)
-    print("population: ", population)
-    input("Tecle algo...")
     return population
 
 def evaluate_population(population):
@@ -64,20 +67,19 @@ def select_parents(population, fitness_scores):
     return parents
 
 def crossover(parent1, parent2):
-    print("parent1: ", parent1)
-    print("parent2: ", parent2)
     crossover_point = random.randint(0, 15)
     child1 = parent1[:crossover_point] + parent2[crossover_point:]
     child2 = parent2[:crossover_point] + parent1[crossover_point:]
-    print("child1: ", child1)
-    print("child2: ", child2)
     return child1, child2
 
 def mutate(individual, mutation_rate):
     for i in range(16):
         if random.random() < mutation_rate:
             blank_pos = get_blank_position(individual)
-            individual[i], individual[blank_pos] = individual[blank_pos], individual[i]
+            if blank_pos >= 0:
+                individual[i], individual[blank_pos] = individual[blank_pos], individual[i]
+            else:
+                individual = insert_blank_position(individual)
     return individual
 
 def evolve_population(population, fitness_scores, mutation_rate):
@@ -103,7 +105,7 @@ def genetic_algorithm(population_size, mutation_rate, max_generations):
 # Exemplo de uso
 population_size = 100
 mutation_rate = 0.1
-max_generations = 1000
+max_generations = 200
 
 solution = genetic_algorithm(population_size, mutation_rate, max_generations)
 print("Solução encontrada:")

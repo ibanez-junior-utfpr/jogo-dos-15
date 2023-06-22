@@ -93,6 +93,5 @@ while melhor > 0:
 		print("Melhor: ", melhor, "Novo Melhor: ", novo_melhor)
 		melhor = novo_melhor
 		mostrar_array(monta_tabela(vetor_atual), monta_tabela(vetor_destino))
-		#input("Tecle Enter...")
 
 print(time.time() - inicio, "Tempo decorrido (Final)")

@@ -1,5 +1,4 @@
 import random
-import copy
 import time
 
 #Montar Tabela a partir de um vetor
@@ -75,9 +74,12 @@ def select_parents(population, fitness_scores):
     return parents
 
 def crossover(parent1, parent2):
-    crossover_point = random.randint(0, 15)
-    child1 = parent1[:crossover_point] + parent2[crossover_point:]
-    child2 = parent2[:crossover_point] + parent1[crossover_point:]
+    crossover_point = random.randrange(16)
+    zero1 = acha_zero(parent1)
+    zero2 = acha_zero(parent2)
+    # faz o crossover a partir da posição do zero em cada parente
+    child1 = parent1[(zero1 - crossover_point):] + parent1[:(zero1 - crossover_point)]
+    child2 = parent2[(zero2 - crossover_point):] + parent2[:(zero2 - crossover_point)]
     return child1, child2
 
 def mutate(individual, mutation_rate):
@@ -110,11 +112,22 @@ def genetic_algorithm(population_size, mutation_rate, max_generations, destino):
 
 # Exemplo de uso
 inicio = time.time()
-population_size = 400
-mutation_rate = 0.1
-max_generations = 200
+population_size = input("População [2000]: ")
+if population_size == '': population_size = '2000'
+population_size = int(population_size)
+mutation_rate = input("Mutação: [0.2]: ")
+if mutation_rate == '': mutation_rate = '0.2'
+mutation_rate = float(mutation_rate)
+max_generations = input("Gerações [100]: ")
+if max_generations == '': max_generations = '100'
+max_generations = int(max_generations)
 destino = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0 ]
+print("==============================")
+print("População: ", population_size)
+print("Mutação..: ", mutation_rate)
+print("Gerações.: ", max_generations)
 solution = genetic_algorithm(population_size, mutation_rate, max_generations, destino)
 print("Solução encontrada:")
 mostrar_array(monta_tabela(solution), monta_tabela(destino))
+print("Melhor: ", compara_objetivo(solution, destino))
 print(time.time() - inicio, "Tempo decorrido (Final)")

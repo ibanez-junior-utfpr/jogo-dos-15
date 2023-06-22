@@ -1,0 +1,25 @@
+C:/Users/prate/AppData/Local/Programs/Python/Python310/python.exe c:/Git_Local/jogo-dos-15/pso-jogo-15.py
+Particulas [500]: 
+Iterações [1000]: 
+Inércia: [0.5]: 
+Cognição: [1.0]: 
+Social: [1.0]: 
+==============================
+Particulas:  500
+Iterações.:  1000
+Inércia...:  0.5
+Cognição..:  1.0
+Social....:  1.0
+==============================
+Iteração..:  999
+Melhor....:  64
+Solução encontrada:
+10      1       11      2
+
+12      3       4       14
+
+5       6       13      7
+
+8       9       15      0
+
+32.15923023223877 Tempo decorrido (Final)

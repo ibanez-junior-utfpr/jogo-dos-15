@@ -1,0 +1,16 @@
+C:/Users/prate/AppData/Local/Programs/Python/Python310/python.exe c:/Git_Local/jogo-dos-15/mari-ag-jogo-15.py
+População [200]: 
+Gerações [100]: 
+==============================
+População:  200
+Gerações.:  100
+Geração:  47
+Avaliação:  0
+Solução encontrada: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0]
+
+Números gerados em forma de grade:
+1       2       3       4
+5       6       7       8
+9       10      11      12
+13      14      15      0
+0.2478475570678711 Tempo decorrido (Final)
